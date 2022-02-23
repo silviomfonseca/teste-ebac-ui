@@ -14,8 +14,8 @@ it('Deve completar o Pré Cadastro com Sucesso', () => {
     cy.get(':nth-child(4) > .button').click()
 
     cy.get('.woocommerce-MyAccount-navigation-link--edit-account').click()
-    cy.get('#account_first_name').type ('silvio')
-    cy.get('#account_last_name').type('Fonseca')
+    cy.get('#account_first_name').type (faker.name.firstName())
+    cy.get('#account_last_name').type(faker.name.lastName())
     cy.get('.woocommerce-Button').click
 });
 
